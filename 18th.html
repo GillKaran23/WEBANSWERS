@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using Class</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
+        <script>
+            function hide(){
+                $(document).ready(function(){
+                    $(".some-class").hide();
+                });
+            }
+        </script>
+        <style>
+            .some-class{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>J Query with Class Selector</h1>
+            <p class="some-class">
+                Paragraph with some-class
+            </p>
+            <button onclick="hide()">Hide Content</button>
+        </center>
+    </body>
+</html>

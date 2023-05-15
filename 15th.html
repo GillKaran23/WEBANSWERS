@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Arithmetic Operations</h1>
+        <hr>
+        <p><u>Enter a number in each text box</u></p>
+        <label><b>Number 1:</b></label>
+        <input type="text" id="num1">
+        <br><br>
+        <label><b>Number 2:</b></label>
+        <input type="text" id="num2">
+        <br>
+        <br>
+        <button onclick="add()">Addition</button>
+        <button onclick="sub()">Subtraction</button>
+        <button onclick="div()">Division</button>
+        <button onclick="mul()">Multiplication</button>
+        <br><br>
+        <label><b>Result is:</b></label>
+        <input type="text" id="res">
+
+        <script>
+            
+            function add(){
+                var a = parseInt(document.getElementById("num1").value);
+                var b = parseInt(document.getElementById("num2").value);
+                var c = a+b;
+                document.getElementById("res").value = c;
+            }
+            function sub(){
+                var a = parseInt(document.getElementById("num1").value);
+                var b = parseInt(document.getElementById("num2").value);
+                var c = a-b;
+                document.getElementById("res").value = c;
+            }
+            function div(){
+                var a = parseInt(document.getElementById("num1").value);
+                var b = parseInt(document.getElementById("num2").value);
+                var c = a/b;
+                document.getElementById("res").value = c;
+            }
+            function mul(){
+                var a = parseInt(document.getElementById("num1").value);
+                var b = parseInt(document.getElementById("num2").value);
+                var c = a*b;
+                document.getElementById("res").value = c;
+            }
+        </script>
+</body>
+</html>

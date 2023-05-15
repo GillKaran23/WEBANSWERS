@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validate Form</title>
+    <script>
+        function validateForm(){
+            var x = document.forms["valform"]["uname"].value;
+            if(x==""){
+                alert("Not submitted");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" name="valform">
+        <label>Username:</label><br>
+        <input type="text" name="uname" id="uname"><br>
+        <button onclick="validateForm()">Click me</button>
+    </form>
+</body>
+</html>

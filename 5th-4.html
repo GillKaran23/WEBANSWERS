@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>By CSS selector</title>
+</head>
+<body>
+    <p class="p1">Everyone</p>
+    <p class="p1">Hello</p>
+    <p id="p2"></p>
+
+    <script>
+        const e = document.querySelectorAll("p.p1");
+        document.getElementById("p2").innerHTML= "I Say " + e[0].innerHTML;
+    </script>
+</body>
+</html>

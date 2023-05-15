@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var btnbox = $('#btnbox');
+      var btn = $('#btn');
+
+        btn.click(function() {
+        $.ajax({
+          url: 'https://api.quotable.io/random',
+          method: 'GET',
+          dataType: 'json',
+          success: function(response) {
+            btnbox.text(response.content);
+          },
+          error: function() {
+            btnbox.text('Failed.');
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Quote Generator</h1>
+  <button id="btn">Click me</button>
+  <div id="btnbox"></div>
+</body>
+</html>

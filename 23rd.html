@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var colorSelect = document.getElementById('colorSelect');
+      var colorDisplay = document.getElementById('colorDisplay');
+      if (document.cookie.includes('color=')) {
+        var colorValue = document.cookie.replace(/(?:(?:^|.*;\s*)color\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+        colorSelect.value = colorValue;
+        colorDisplay.innerText = 'Selected color: ' + colorValue;
+        document.body.style.backgroundColor = colorValue;
+      }
+      colorSelect.addEventListener('change', function() {
+        var selectedColor = colorSelect.value;
+        document.cookie = 'color=' + selectedColor + '; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        colorDisplay.innerText = 'Selected color is : ' + selectedColor;
+        document.body.style.backgroundColor = selectedColor;
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Color</h1>
+  <label for="colorSelect">Choose a color:</label>
+  <select id="colorSelect">
+    <option value="">Select a color</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+  </select>
+  <br><br>
+  <div id="colorDisplay">Selected color</div>
+</body>
+</html>

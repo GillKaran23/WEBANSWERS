@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Validate Form</title>
+    <script>
+        function valform(event) {
+            event.preventDefault();
+            const n = document.getElementById("username");
+            const username = n.value;
+
+            if (username.length === 6) {
+                window.location.href = "nextpage.html";
+            } else {
+                alert("Username should be 6 characters long!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+  <form onsubmit="valform(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>

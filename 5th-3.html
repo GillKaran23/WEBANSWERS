@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>By tagname</title>
+</head>
+<body>
+    <p>Everyone</p>
+    <p>Hello</p>
+    <p id="p2"></p>
+
+    <script>
+        const e = document.getElementsByTagName("p");
+        document.getElementById("p2").innerHTML= "I Say " + e[1].innerHTML;
+    </script>
+</body>
+</html>
